@@ -19,7 +19,11 @@
 
 	<div id="map" class="map"></div>
 
+//This line is a comment. The two slashes mean these lines are not read by the computer
+
+//Everything before this line is just setup to allow us to create our map
 	<script>
+		//create a map with the center on the coordinates in the brackets, and zoom level 18
 		var map = L.map('map', {
 			center: [53.38, -6.595],
 			zoom: 18,
@@ -30,16 +34,18 @@
 
 		//Cart Lab point
 		var marker1 = L.marker([53.378717, -6.596526]).addTo(map);
+		//Popup
 		marker1.bindPopup("Hello!<br>I am a popup.<br>This is the Cart Lab").openPopup();
 
 		//Maynooth Castle
 		var marker2 = L.marker([53.381080, -6.593864]).addTo(map);
+		//Popup with image
 		marker2.bindPopup(
 			'Maynooth Castle <br><img width = "200", src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Maynooth_Castle4.jpg/1024px-Maynooth_Castle4.jpg">'
 		).openPopup();
 
 		//A circle
-		var circle = L.circle([53.3813, -6.5918], {
+		var circle = L.circle([53.378717, -6.596526], {
     	color: 'red',
     	fillColor: '#f03',
     	fillOpacity: 0,
